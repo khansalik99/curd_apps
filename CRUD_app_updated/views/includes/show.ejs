@@ -1,0 +1,19 @@
+<% for(let song of songs)  {%>
+    <tr class="table-primary text-center">
+        <th  scope="row"><%= song.categoryId.title %></th>
+        <td><%= song.title %></td>
+        <td><%= song.artist %></td>
+        <td>
+            <a href="<%= song.imageUrl %>"><%= song.imageUrl %></a>
+        </td>
+        
+        <td>
+            <a href="/user/update-song/<%= song._id %>&<%= song.categoryId._id %>?edit=true" type="button" class="btn btn-secondary">Edit</a></td>
+    <td>
+        <form action="/user/delete-song" method="post">
+            <input type="hidden" value="<%= song._id %>" name="songId">
+          <button type="submit" class="btn btn-danger" id="<%= song._id %>">Delete</button>
+        </form>
+    </td>
+    </tr>
+<% } %>

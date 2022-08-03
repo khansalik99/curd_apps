@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation-menu.ejs') %>   
+    <div class="container">
+        <h1 class="text-center">Add New Song</h1>
+        
+        <%- include('includes/form.ejs') %>    
+        <!-- add user form  -->
+        <div class="text-center">
+            <a class="btn btn-warning" href="/user/list-songs">All Songs</a>
+        </div>
+    </div>
+  
+<%- include('includes/end.ejs') %>
