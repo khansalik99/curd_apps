@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+<%- include('includes/navigation-menu.ejs') %>  
+<div class="container text-center h-100">
+    <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+        <h1>
+            CRUD Application
+        </h1>
+        <h2>
+            Playlist
+        </h2>
+        <h3>Welcome <%= name  %> ! You Are Authenticated</h3>
+        <p>This is the index page of a Song Management CRUD Application</p>
+        <p>To perform the CRUD operations, please click on the links in the Navigation Bar</p>
+        <p>You can create various categories to place songs in them from 'Create Category' link</p>
+        <p>To view the complete playlist click on the 'All Songs' link</p>
+
+        <form action="/logout" method="POST">
+            <button class="btn-styled">Logout</button>
+        </form>
+    </div>
+</div>
+        <%- include('includes/footer.ejs') %>
+        <%- include('includes/end.ejs') %>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+<%- include('includes/navigation-menu.ejs') %>  
+<div class="container text-center h-100">
+    <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+        <h1>
+            CRUD Application
+        </h1>
+        <h2>
+            Admin Dashboard
+        </h2>
+        <h3>Welcome <%= name  %> ! You Are Authenticated</h3>
+      
+                <p class="btn-styled" style="background-color: cadetblue;">
+                    <a href="#" >Admins</a>
+                </p>
+                <p class="btn-styled" style="background-color: cadetblue;">
+                    <a href="#" >Users</a>
+                </p>
+          
+            
+                <p class="btn-styled" style="background-color: cadetblue;">
+                    <a href="#" >Songs</a>
+                </p>
+                <p class="btn-styled" style="background-color: cadetblue;">
+                    <a href="#" >Categories</a>
+                </p>
+            
+
+        <form action="/logout" method="POST">
+            <button class="btn-styled">Logout</button>
+        </form>
+    </div>
+</div>
+        <%- include('includes/footer.ejs') %>
+        <%- include('includes/end.ejs') %>
