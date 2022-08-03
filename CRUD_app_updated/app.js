@@ -76,7 +76,7 @@ mongoose.connect('mongodb://localhost:27017/playlist', () => {
     // });
     // metalCategory.save();
     
-    app.listen(3000, () => {
+    app.listen(5001, () => {
         console.log('Started listening at port 3000.');
     });
 });
