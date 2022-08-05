@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signin Page</title>
+  </head>
+  <body class="text-center">
+  <div class="Signin">
+    <form action="/register" method="POST">
+      <h1 class="signin-line">Please register yourself</h1>
+      <div class="form-floating">
+        <label for="floatingInput">Name</label>
+        <input type="text" class="form-control" id="floatingInput"  name="name" placeholder="khan" required>
+      </div>
+      <div class="form-floating">
+        <label for="floatingInput">Email address</label>
+        <input type="email" class="form-control" id="floatingInput"  name="email" placeholder="name@example.com" required>
+      </div>
+      <div class="form-floating">
+        <label for="floatingPassword">Password</label>
+        <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" required>
+      </div>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-outline-light btn-lg px-5" type="submit">register</button>
+      <p class="mt-5 mb-3 text-muted"> we assure your security</p>
+  </form>
+</div>
+ 
+  </body>
+</html>
