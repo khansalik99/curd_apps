@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation-menu.ejs') %>   
+    <section class="dashboard-background">
+
+        <div class="container my-5">
+            <div class= "d-flex flex-column justify-content-center align-items-center ">
+                <h1 class="text-center my-5">Add New Song</h1>
+                
+                <%- include('includes/form.ejs') %>    
+                <!-- add user form  -->
+                <div class="text-center">
+                    <a class="btn-styled" style="background-color: rgb(193, 61, 219);" href="/admin/list-songs">All Songs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+<%- include('includes/end.ejs') %>

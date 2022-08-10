@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation-menu.ejs') %>   
+        <section class="dashboard-background">
+            <div class="container">
+                <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+                    <h1 class="text-center">Add New Admin</h1>
+                    
+                    <div class="d-flex justify-content-center align-items-center">
+                        <form action="/admin-controls/add-admin" method="post">
+                            
+                            <label>Admin Name</label>
+                            <p><input type="text" class="form-control" name="name" ></p>
+                            <label>Admin Email</label>
+                            <p><input type="text" class="form-control" name="email"></p>
+                            <label>Password</label>
+                            <p><input type="password" class="form-control" name="password"></p>
+                            <p class="text-center"><button type="submit" class="btn-styled">Create</button></p>
+                            
+                        </div>
+                    </form>
+                    <a class="btn-styled" href='/admin-controls/all-admins'><i class="fa fa-angle-double-left" aria-hidden="true"></i>  All Admins</a>
+                </div>                 
+            </div>
+        </div>
+    </section>
+  
+<%- include('includes/end.ejs') %>

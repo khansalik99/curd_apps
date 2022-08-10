@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation-menu.ejs') %>  
+    <section class="dashboard-background">
+    <div class="container">
+        <h1 class="text-center my-5">Update Song</h1>
+        <!-- update user form  -->
+        <div class="d-flex justify-content-center align-items-center">
+            <form action="/admin/update-song" method="post" id="update_song">
+                            <label>Category</label> 
+                            <p>
+                                <select class="form-control" name="categoryId" required>
+                                    <option value="">--Select--</option>
+                                    <% for(let category of categories) {%>
+                                        <%if (category.title==song.categoryId) {%>
+                                            <option selected='selected' value= "<%= category.title %>"><%= category.title %></option>;
+                                       
+                                       <%}else{%>
+                                        <option value="<%= category.title %>"><%= category.title %></option>
+                                      <% } %> 
+                                    <% } %>
+                                </select>
+                            </p>
+                        <label>Name</label>
+                        <p><input type="text" class="form-control" name="name" placeholder="Night Changes" value="<%= song.title %>"></p>
+                        <label>Artist</label>
+                        <p><input type="text" class="form-control" name="artist" value="<%= song.artist %>"></p>
+                        <label>Song Url</label>
+                        <p><input type="text" class="form-control" name="imageUrl" value="<%= song.imageUrl %>"></p>
+
+                        <input type="hidden" value="<%= song._id %>" name="songId">
+                        <p class="text-center"><button type="submit" class="btn-styled" style="background-color: rgb(193, 61, 219);">Update Song</button></p>
+          
+            </div>
+        </form>
+        </div>  
+        <div class="text-center">
+            <a class="btn-styled" style="background-color: rgb(7, 5, 7);" href="/admin/list-songs"><i class="	fa fa-arrow-circle-left"></i> All Songs</a>
+        </div>
+    </div>
+  </section>
+<%- include('includes/end.ejs') %>

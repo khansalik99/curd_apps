@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('includes/navigation-menu.ejs') %>
+            <section class="dashboard-background">
+                <div class="container text-center">
+                    <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+                        <h1 class="my-2">Welcome <%= name %>!</h1>
+                        <h2 class="my-3">
+                            Your Playlist
+                        </h2>
+                            <% if(songs.length <=0) {%>
+                                <h1>No song found</h1>
+                                <% } else {%>
+                                    <div class="container">
+                                        <div class="table-responsive-sm">
+                            
+                                            <table class="table table-dark  ">
+                                                <thead>
+                                                    <tr class="text-center">
+                            
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Song Category</th>
+                                                        <th scope="col">Song Name</th>
+                                                        <th scope="col">Artist</th>
+                                                        <th scope="col">Song URL</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <%- include('includes/show.ejs') %>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    </div>
+                                <% } %>
+                    
+                    </div>
+                </div>
+            </section>
+    
+            <%- include('includes/end.ejs') %>

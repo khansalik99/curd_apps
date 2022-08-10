@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation-menu.ejs') %>   
+        <section class="dashboard-background">
+
+            <div class="container">
+                <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+                    <h1 class="text-center">Add New Category</h1>
+                    <% if (success !== '') { %> 
+                        <div class="alert alert-success fade show text-center" role="alert"><%=  `${success}`%> </div>
+                        <% } %> 
+                        <div class="d-flex justify-content-center align-items-center">
+                            <form action="/admin/add-category" method="post">
+                                
+                                <label>Category Name</label>
+                                <p><input type="text" class="form-control" name="title" ></p>
+                                <label>Category Description</label>
+                                <p><input type="text" class="form-control" name="description"></p>
+                                <p class="text-center"><button type="submit"  class="btn-styled" style="background-color: rgb(193, 61, 219);">Create</button></p>
+                                
+                            </div>
+                        </form>
+                        <a class="btn-styled" href="/admin/all-categories">  All Categories</a>
+                    </div>   
+                </div>
+            </div>
+        </section>
+  
+<%- include('includes/end.ejs') %>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('includes/navigation-menu.ejs') %>
+            <section class="dashboard-background">
+
+                <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+                    <h1 class="text-center">All Admins</h1>
+                    <div class="text-center container my-3">
+                        <a class="btn-styled" href="/admin-controls/add-admin">Add New Admin</a>
+                    </div>
+                    <% if(admins.length <=0) {%>
+                        <h1>No admin found</h1>
+                        <% } else {%>
+                            <div class="container">
+                                <div class="table-responsive-sm">
+                                    <table class="table table-dark ">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th>#</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% let i=0 %> 
+                                            <% for(let admin of admins) {%>
+                                                <tr class="text-center">
+                                                    <td>
+                                                        <%= i=i+1 %>
+                                                    </td>
+                                                    <td>
+                                                        <%= admin.username %>
+                                                    </td>
+                                                    <td>
+                                                        <%= admin.email %>
+                                                    </td>
+
+
+                                                </tr>
+                                                <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                </div>
+                <% } %>
+            </section>
+            <%- include('includes/end.ejs') %>

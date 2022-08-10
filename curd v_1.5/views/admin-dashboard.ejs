@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+<%- include('includes/navigation-menu.ejs') %> 
+<section class="dashboard-background">
+
+<div class="container text-center ">
+    <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+       
+        <h1>
+            Admin Dashboard
+        </h1>
+        <h2>Welcome <%= name  %>! You Are Authenticated</h2>
+        <h3>Menu</h3>
+                <p class="btn-styled" style="background-color: rgb(193, 61, 219);">
+                    <a href="/admin-controls/all-admins" >Admins</a>
+                </p>
+                <p class="btn-styled" style="background-color: rgb(193, 61, 219);">
+                    <a href="/admin-controls/all-users" >Users</a>
+                </p>          
+                <p class="btn-styled" style="background-color: rgb(193, 61, 219);">
+                    <a href="/admin/list-songs" >Songs</a>
+                </p>
+                <p class="btn-styled" style="background-color: rgb(193, 61, 219);">
+                    <a href="/admin/all-categories" >Categories</a>
+                </p>
+
+        <form action="/logout" method="POST">
+            <button class="btn-styled">Logout</button>
+        </form>
+    </div>
+</div>
+</section>
+     
+        <%- include('includes/end.ejs') %>

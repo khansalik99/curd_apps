@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center align-items-center">
+    <form action="/admin/add-song" method="post" id=""add_song>
+     
+                    <label>Category</label> 
+                    <p>
+                        <select class="form-control" name="categoryId">
+                            <option value="">--Select--</option>
+                            <% for(let category of categories) {%>
+                                <option value="<%= category.title %>"><%= category.title %></option>
+                            <% } %>
+                        </select>
+                    </p>
+            
+                <label>Name</label>
+                <p><input type="text" class="form-control" name="name" placeholder="Night Changes"></p>
+
+                <label>Artist</label>
+                <p><input type="text" class="form-control" name="artist"></p>
+
+                <label>Song Link</label>
+                <p><input type="text" class="form-control" name="imageUrl"></p>
+ 
+                <p class="text-center"><button type="submit" class="btn-styled" style="background-color: rgb(8, 6, 8);">Add Song</button></p>
+  
+    </div>
+</form>
+</div>

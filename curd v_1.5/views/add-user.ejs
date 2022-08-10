@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation-menu.ejs') %>   
+    
+    <div class="container">
+        <div class="d-flex flex-column justify-content-md-center align-items-center vh-100">
+        <h1 class="text-center">Add New User</h1>
+       
+        <div class="d-flex justify-content-center align-items-center">
+            <form action="/admin-controls/add-user" method="post">
+                                            
+                <label>User Name</label>
+                <p><input type="text" class="form-control" name="name" ></p>
+                <label>User Email</label>
+                <p><input type="text" class="form-control" name="email"></p>
+                <label>Password</label>
+                <p><input type="password" class="form-control" name="password"></p>
+                <p class="text-center"><button type="submit" class="btn-styled">Create</button></p>
+          
+            </div>
+        </form>
+        <a class="btn-styled" href='/admin-controls/all-users'><i class="fa fa-angle-double-left" aria-hidden="true"></i>  All Users</a>
+        </div>   
+        <!-- Go to All songs List -->
+       
+        </div>
+    </div>
+  
+<%- include('includes/end.ejs') %>
